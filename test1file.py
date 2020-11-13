@@ -31,3 +31,36 @@ Main:
   if option 1 is better, output to the user, "Option 1 is better."
   if option 2 is better, output to the user, "Option 2 is better."
 """
+
+def option1():
+  day = 0
+  pay = 0
+  while day < 10:
+    day += 1
+    pay += 100
+  return pay
+
+def option2():
+  day = 0
+  pay = 1
+  total_pay = 0
+  while day < 10:
+    day += 1
+    total_pay += pay
+    pay *= 2
+  return total_pay
+
+def main():
+  var1 = option1()
+  var2 = option2()
+  answer = ""
+
+  if var1 == var2:
+    answer = ("Option 1 and Option 2 pay the same.")
+  if var1 > var2:
+    answer = ("Option 1 is better.")
+  else:
+    answer = ("Option 2 is better.")
+  print(answer)
+
+main()
